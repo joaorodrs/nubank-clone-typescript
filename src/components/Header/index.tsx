@@ -13,7 +13,7 @@ const Header: React.FC = () => {
     <Container>
       <Top>
         <Logo source={require('../../assets/Nubank_Logo.png')} />
-        <Title>João Paulo</Title>
+        <Title>Roziney Alencar de Castro</Title>
       </Top>
       <MaterialIcons name="keyboard-arrow-down" size={20} color="white" />
     </Container>

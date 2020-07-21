@@ -1,4 +1,5 @@
 import styled from 'styled-components/native'
+import { StyleSheet } from 'react-native'
 
 export const Container = styled.ScrollView`
   margin: 0 30px;
@@ -6,15 +7,42 @@ export const Container = styled.ScrollView`
 
 export const Code = styled.View`
   background-color: white;
-  padding: 10px;
+  padding: 5px;
   align-self: center;
 `
 
 export const Nav = styled.View`
   margin-top: 30px;
-  border-top-width: 0.38px;
+  border-top-width: ${StyleSheet.hairlineWidth}px;
+  border-top-color: rgba(255,255,255,0.8);
 `
 
-export const NavItems = styled.View``
+export const NavItems = styled.View`
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom-width: ${StyleSheet.hairlineWidth}px;
+  border-bottom-color: rgba(255,255,255,0.8);
+`
 
-export const NavText = styled.Text``
+export const NavText = styled.Text`
+  font-size: 15px;
+  color: white;
+  margin-left: 20px;
+`
+
+export const SignOutButton = styled.TouchableOpacity`
+  border-width: ${StyleSheet.hairlineWidth}px;
+  border-color: rgba(255,255,255,0.8);
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  margin-top: 15px;
+`
+
+export const SignOutButtonText = styled.Text`
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+`

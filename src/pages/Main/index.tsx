@@ -33,7 +33,7 @@ const Main: React.FC = () => {
           </CardHeader>
           <CardContent>
             <Title>Saldo disponível</Title>
-            <Description>R$ 197.611,65</Description>
+            <Description>R$ 1.976.113,65</Description>
           </CardContent>
           <CardFooter>
             <Annotation>

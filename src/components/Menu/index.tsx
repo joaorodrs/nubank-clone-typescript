@@ -6,7 +6,9 @@ import {
   Code,
   Nav,
   NavItems,
-  NavText
+  NavText,
+  SignOutButton,
+  SignOutButtonText
 } from './styles'
 // @ts-ignore
 import { QRCode } from 'react-native-custom-qr-codes-expo'
@@ -17,10 +19,8 @@ const Menu: React.FC = () => {
       <Code>
         <QRCode
           content='https://devtroopers.com.br'
-          codeStyle="dot"
-          size={80}
-          backgroundColor="#8b10ae"
-          logo={require('../../assets/Nubank_Logo.png')}
+          size={100}
+          color="#8b10ae"
         />
       </Code>
 
@@ -42,6 +42,10 @@ const Menu: React.FC = () => {
           <NavText>Configurações do app</NavText>
         </NavItems>
       </Nav>
+
+      <SignOutButton onPress={() => {}}>
+        <SignOutButtonText>Sair do app</SignOutButtonText>
+      </SignOutButton>
     </Container>
   )
 }
