@@ -1,5 +1,6 @@
 import React from 'react'
 import { MaterialIcons } from '@expo/vector-icons'
+import { Animated } from 'react-native'
 
 import {
   Container,
@@ -13,9 +14,18 @@ import {
 // @ts-ignore
 import { QRCode } from 'react-native-custom-qr-codes-expo'
 
-const Menu: React.FC = () => {
+interface Props {
+  translateY: Animated.Value
+}
+
+const Menu: React.FC<Props> = ({ translateY }) => {
   return (
-    <Container>
+    <Container style={{
+      opacity: translateY.interpolate({
+        inputRange: [0, 150],
+        outputRange: [0, 100]
+      })
+    }}>
       <Code>
         <QRCode
           content='https://devtroopers.com.br'
